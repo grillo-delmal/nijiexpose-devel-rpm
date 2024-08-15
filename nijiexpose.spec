@@ -218,7 +218,7 @@ appstream-util validate-relax --nonet \
     ${RPM_BUILD_ROOT}%{_metainfodir}/nijiexpose.appdata.xml
 
 install -d $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/
-install -p -m 644 ./res/logo_256.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/nijiexpose.png
+install -p -m 644 ./res/icon_x256.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/nijiexpose.png
 
 # Dependency licenses
 install -d ${RPM_BUILD_ROOT}%{_datadir}/licenses/%{name}/deps/
