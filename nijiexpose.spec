@@ -1,13 +1,13 @@
 %define nijiexpose_ver 0.0.0
-%define nijiexpose_semver 0.0.0+build.249.07c757e
-%define nijiexpose_dist 249
-%define nijiexpose_commit 07c757e7149127a968fd6c2508973b68eb56127e
-%define nijiexpose_short 07c757e
+%define nijiexpose_semver 0.0.0+build.257.bbed19c
+%define nijiexpose_dist 257
+%define nijiexpose_commit bbed19c59cf3ee773a3548d2036307f651661069
+%define nijiexpose_short bbed19c
 
 # Project maintained deps
-%define nijilive_semver 0.0.0+build.649.20567d5
-%define nijilive_commit 20567d51f25d629c9378745b88a2c30d0f6216e0
-%define nijilive_short 20567d5
+%define nijilive_semver 0.0.0+build.652.bd00329
+%define nijilive_commit bd003295f2bae1c67127d4f5c051a9e91099078a
+%define nijilive_short bd00329
 
 %define nijiui_semver 0.0.0+build.77.73c9acf
 %define nijiui_commit 73c9acf257ca54fbb0a4274db4fd10e5f82a456e
