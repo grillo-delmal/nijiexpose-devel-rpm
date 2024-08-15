@@ -66,7 +66,8 @@ Source2:        https://github.com/nijigenerate/nijiui/archive/%{nijiui_commit}/
 
 Patch0:         nijiexpose_0_deps.patch
 Patch1:         nijiexpose_1_lua.patch
-Patch2:         nijiui_0_deps.patch
+Patch2:         nijiexpose_2_icon-path.patch
+Patch3:         nijiui_0_deps.patch
 
 # dlang
 BuildRequires:  ldc
@@ -150,6 +151,7 @@ dub add-local deps/bindbc-spout2 "0.1.1"
 
 %patch -P 0 -p1 -b .nijiexpose-deps
 %patch -P 1 -p1 -b .nijiexpose-lua
+%patch -P 2 -p1 -b .nijiexpose-icon-path
 mkdir -p deps
 
 # Project maintained deps
@@ -178,7 +180,7 @@ dub add-local deps/nijiui/ "%{nijiui_semver}"
 
 pushd deps; pushd nijiui
 
-%patch -P 2 -p1 -b .nijiui-deps
+%patch -P 3 -p1 -b .nijiui-deps
 
 [ -f dub.sdl ] && dub convert -f json
 mv -f dub.json dub.json.base
