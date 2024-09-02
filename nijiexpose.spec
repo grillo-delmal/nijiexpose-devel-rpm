@@ -1,17 +1,17 @@
 %define nijiexpose_ver 0.0.0
-%define nijiexpose_semver 0.0.0+build.257.bbed19c
-%define nijiexpose_dist 257
-%define nijiexpose_commit bbed19c59cf3ee773a3548d2036307f651661069
-%define nijiexpose_short bbed19c
+%define nijiexpose_semver 0.0.0+build.280.5c5819f
+%define nijiexpose_dist 280
+%define nijiexpose_commit 5c5819f2eb56600956ad104e5d92d439f6d61425
+%define nijiexpose_short 5c5819f
 
 # Project maintained deps
-%define nijilive_semver 0.0.0+build.652.bd00329
-%define nijilive_commit bd003295f2bae1c67127d4f5c051a9e91099078a
-%define nijilive_short bd00329
+%define nijilive_semver 0.0.0+build.657.1ebf533
+%define nijilive_commit 1ebf533aceab3c20d340772a56a10d081d48d944
+%define nijilive_short 1ebf533
 
-%define nijiui_semver 0.0.0+build.77.73c9acf
-%define nijiui_commit 73c9acf257ca54fbb0a4274db4fd10e5f82a456e
-%define nijiui_short 73c9acf
+%define nijiui_semver 0.0.0+build.80.f2d562f
+%define nijiui_commit f2d562f8a9499b19598515d9487eafae9b7c2fb6
+%define nijiui_short f2d562f
 
 %if 0%{nijiexpose_dist} > 0
 %define nijiexpose_suffix ^%{nijiexpose_dist}.git%{nijiexpose_short}
@@ -65,9 +65,7 @@ Source1:        https://github.com/nijigenerate/nijilive/archive/%{nijilive_comm
 Source2:        https://github.com/nijigenerate/nijiui/archive/%{nijiui_commit}/nijiui-%{nijiui_short}.tar.gz
 
 Patch0:         nijiexpose_0_deps.patch
-Patch1:         nijiexpose_1_lua.patch
-Patch2:         nijiexpose_2_icon-path.patch
-Patch3:         nijiui_0_deps.patch
+Patch1:         nijiui_0_deps.patch
 
 # dlang
 BuildRequires:  ldc
@@ -123,7 +121,7 @@ Requires:       freetype
 Requires:       SDL2
 
 #openssl deps
-Requires:       openssl-devel
+Requires:       openssl
 
 
 %description
@@ -150,8 +148,6 @@ dub add-local deps/bindbc-spout2 "0.1.1"
 
 
 %patch -P 0 -p1 -b .nijiexpose-deps
-%patch -P 1 -p1 -b .nijiexpose-lua
-%patch -P 2 -p1 -b .nijiexpose-icon-path
 mkdir -p deps
 
 # Project maintained deps
@@ -180,7 +176,7 @@ dub add-local deps/nijiui/ "%{nijiui_semver}"
 
 pushd deps; pushd nijiui
 
-%patch -P 3 -p1 -b .nijiui-deps
+%patch -P 1 -p1 -b .nijiui-deps
 
 [ -f dub.sdl ] && dub convert -f json
 mv -f dub.json dub.json.base
