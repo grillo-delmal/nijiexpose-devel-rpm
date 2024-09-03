@@ -107,6 +107,25 @@ BuildRequires:  zdub-vibe-core-static
 BuildRequires:  zdub-vibe-d-static
 BuildRequires:  zdub-vmc-d-static
 
+#bindbc-lua reqs
+BuildRequires:       luajit-devel
+
+#dportals reqs
+BuildRequires:       dbus-devel
+
+#i2d-imgui reqs
+BuildRequires:       cmake
+BuildRequires:       gcc
+BuildRequires:       gcc-c++
+BuildRequires:       freetype-devel
+BuildRequires:       SDL2-devel
+
+#mir-algorithm reqs
+BuildRequires:       zdub-silly-static
+
+#openssl reqs
+BuildRequires:       openssl-devel
+
 Requires:       hicolor-icon-theme
 
 #bindbc-lua deps
