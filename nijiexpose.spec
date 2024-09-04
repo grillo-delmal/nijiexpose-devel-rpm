@@ -120,9 +120,6 @@ BuildRequires:       gcc-c++
 BuildRequires:       freetype-devel
 BuildRequires:       SDL2-devel
 
-#mir-algorithm reqs
-BuildRequires:       zdub-silly-static
-
 #openssl reqs
 BuildRequires:       openssl-devel
 
